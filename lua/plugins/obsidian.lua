@@ -13,6 +13,10 @@ return {
         path = "G:/My Drive/My folder/Obsidian",
       },
     },
+    note_id_func = function(title)
+      -- Use the title (link text) as filename directly, no ID prefix
+      return title
+    end,
     debug = true,
   },
   config = function(_, opts)
