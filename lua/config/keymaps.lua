@@ -9,3 +9,5 @@ vim.keymap.set("n", "<leader>on", function()
     vim.cmd("ObsidianNew " .. title)
   end
 end, { desc = "New Obsidian note with title" })
+
+vim.keymap.set('n', '<leader>ob', ':ObsidianBacklinks<CR>', { silent = true, noremap = true })

@@ -1,4 +1,3 @@
-
 return {
   "epwalsh/obsidian.nvim",
   lazy = false,
