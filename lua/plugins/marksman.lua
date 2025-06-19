@@ -4,10 +4,19 @@ return {
     opts = {
       servers = {
         marksman = {
-          -- Only enable Marksman for Markdown files
           filetypes = { "markdown" },
+          settings = {
+            marksman = {
+              diagnostics = {
+                enabled = true,
+                ambiguousLinks = false,  -- disable ambiguous link warnings
+              },
+              hover = false,
+            },
+          },
         },
       },
     },
   },
 }
+
