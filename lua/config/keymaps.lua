@@ -3,8 +3,12 @@ vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { desc = "Run current file" })
 vim.keymap.set('n', '<leader>r', ':LspRestart marksman<CR>', { desc = "Restart marksman LSP" })
 
 -- Obsidian
+--
+vim.keymap.set("n", "<leader>ody", ":ObsidianYesterday<CR>", { desc = "ObsidianYesterday" })
+vim.keymap.set("n", "<leader>odt", ":ObsidianToday<CR>", { desc = "ObsidianToday" })
+vim.keymap.set("n", "<leader>odm", ":ObsidianTomorrow<CR>", { desc = "ObsidianTomorrow" })
 vim.keymap.set("v", "<leader>ol", ":ObsidianLink<Space>", { desc = "Obsidian: Link to Note" })
-vim.keymap.set("n", "<leader>ot", ":ObsidianTOC<CR>", { desc = "ObsidiaTOC" })
+vim.keymap.set("n", "<leader>oc", ":ObsidianTOC<CR>", { desc = "ObsidiaTOC" })
 vim.keymap.set("n", "<leader>ol", ":ObsidianLinks<CR>", { desc = "Obsidian Links" })
 vim.keymap.set("n", "<leader>oh", ":ObsidianFollowLink hsplit<CR>", { desc = "Obsidian: Follow Link (hsplit)" })
 vim.keymap.set("n", "<leader>ov", ":ObsidianFollowLink vsplit<CR>", { desc = "Obsidian: Follow Link (vsplit)" })
