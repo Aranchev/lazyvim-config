@@ -25,3 +25,16 @@ vim.keymap.set("n", "<leader>on", function()
   end
 end, { desc = "New Obsidian note with title" })
 
+-- Directory shortcuts
+
+vim.keymap.set("n", "<leader>d1", function()
+  vim.cmd.cd("G:/My Drive/My folder/Obsidian")
+end, { desc = "Obsidian vault" })
+
+vim.keymap.set("n", "<leader>d2", function()
+  vim.cmd.cd("C:/Users/Emi Nikolova/pytest_fundamental")
+end, { desc = "pytest_fundamental" })
+
+
+
+
