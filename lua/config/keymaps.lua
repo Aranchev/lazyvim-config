@@ -2,6 +2,26 @@ vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>:pwd<CR>', { desc = "Set cwd to 
 vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { desc = "Run current file" })
 vim.keymap.set('n', '<leader>r', ':LspRestart marksman<CR>', { desc = "Restart marksman LSP" })
 
+vim.keymap.set("v", "<A-h>", function()
+  -- Save the visual selection
+  local esc = vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
+  vim.api.nvim_feedkeys(esc, "x", false)
+  -- Expand selection to include last character
+  vim.cmd('normal! `<i==')
+  vim.cmd('normal! `>la==')
+end, { desc = "Wrap selection with ==", silent = true })
+
+
+vim.keymap.set("v", "<A-b>", function()
+  -- Save the visual selection
+  local esc = vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
+  vim.api.nvim_feedkeys(esc, "x", false)
+  -- Expand selection to include last character
+  vim.cmd('normal! `<i**')
+  vim.cmd('normal! `>la**')
+end, { desc = "Wrap selection with ", silent = true })
+
+
 -- Obsidian
 --
 vim.keymap.set("n", "<leader>ody", ":ObsidianYesterday<CR>", { desc = "ObsidianYesterday" })
