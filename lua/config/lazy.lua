@@ -26,6 +26,13 @@ vim.opt.wrap = true
 require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+
+    -- Disable gitsigns.nvim (prevents that error)
+    {
+      "lewis6991/gitsigns.nvim",
+      enabled = false,
+    },
+
     { import = "plugins" },  -- or { import = "plugins.code_runner" } if just one file
     -- other plugin specs if any
   },
@@ -46,6 +53,7 @@ require("lazy").setup({
     enabled = true,
     notify = false,
   },
+
 
   -- Performance tweaks (disabling some builtin plugins)
   performance = {

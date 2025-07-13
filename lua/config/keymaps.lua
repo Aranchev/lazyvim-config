@@ -1,7 +1,9 @@
 vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>:pwd<CR>', { desc = "Set cwd to current file's dir" })
-vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { desc = "Run current file" })
-vim.keymap.set('n', '<leader>r', ':LspRestart marksman<CR>', { desc = "Restart marksman LSP" })
+vim.keymap.set('n', '<leader>ru', ':RunCode<CR>', { desc = "Run current file" })
 vim.keymap.set('n', '<leader>da', ':lua Snacks.dashboard()<CR>', { desc = "Dashboard" })
+
+vim.keymap.set('n', '<leader>pt', ':!set "PYTHONPATH=C:/Users/Emi Nikolova/pytest_fundamental" && pytest "%"<CR>', { silent = true })
+
 
 vim.keymap.set("v", "<A-h>", function()
   -- Save the visual selection
