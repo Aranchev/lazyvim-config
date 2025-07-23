@@ -1,8 +1,12 @@
 vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>:pwd<CR>', { desc = "Set cwd to current file's dir" })
-vim.keymap.set('n', '<leader>ru', ':RunCode<CR>', { desc = "Run current file" })
+vim.keymap.set('n', '<leader>ru', ':w<CR>:RunCode<CR>', { desc = "Run current file" })
 vim.keymap.set('n', '<leader>da', ':lua Snacks.dashboard()<CR>', { desc = "Dashboard" })
 
-vim.keymap.set('n', '<leader>pt', ':!set "PYTHONPATH=C:/Users/Emi Nikolova/pytest_fundamental" && pytest "%"<CR>', { silent = true })
+
+
+vim.api.nvim_set_keymap('n', '<leader>pt',
+  ':split | terminal cmd /c "set PYTHONPATH=C:/Users/Emi Nikolova/pytest_fundamental && pytest "%""<CR>', 
+  { noremap = true, silent = true })
 
 
 vim.keymap.set("v", "<A-h>", function()
@@ -57,3 +61,8 @@ end, { desc = "Obsidian vault" })
 vim.keymap.set("n", "<leader>d2", function()
   vim.cmd.cd("C:/Users/Emi Nikolova/pytest_fundamental")
 end, { desc = "pytest_fundamental" })
+
+vim.keymap.set("n", "<leader>d3", function()
+  vim.cmd.cd("C:/Users/Emi Nikolova/microblog")
+end, { desc = "microblog" })
+
