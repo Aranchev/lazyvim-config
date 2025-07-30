@@ -92,3 +92,5 @@ vim.keymap.set("n", "<leader>ou", function()
     vim.notify("No reference link found", vim.log.levels.ERROR)
   end
 end, { desc = "Open URL from reference link" })
+
+

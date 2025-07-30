@@ -33,18 +33,17 @@ return {
       time_format = "%H:%M",
     },
 
-    -- ✅ Put follow_url_func INSIDE opts
+    -- ✅ This is your fixed function
     follow_url_func = function(url)
       if vim.fn.has("win32") == 1 then
-        vim.cmd(':silent exec "!start ' .. url .. '"')
+        vim.fn.jobstart({ "cmd.exe", "/C", "start", "", url }, { detach = true })
       elseif vim.fn.has("mac") == 1 then
-        vim.fn.jobstart({ "open", url })
+        vim.fn.jobstart({ "open", url }, { detach = true })
       elseif vim.fn.has("unix") == 1 then
-        vim.fn.jobstart({ "xdg-open", url })
+        vim.fn.jobstart({ "xdg-open", url }, { detach = true })
       else
         print("Cannot open URL: Unsupported system")
       end
     end,
   },
 }
-
