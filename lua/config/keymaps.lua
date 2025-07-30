@@ -21,6 +21,9 @@ vim.keymap.set("n", "<leader>d3", function()
   vim.cmd.cd("C:/Users/Emi Nikolova/microblog")
 end, { desc = "set dir: to microblog" })
 
+vim.keymap.set("n", "<leader>d4", function()
+  vim.cmd.cd("C:/Users/Emi Nikolova/AppData/Local/nvim")
+end, { desc = "set dir: nvim" })
 
 
 -- txt formating
