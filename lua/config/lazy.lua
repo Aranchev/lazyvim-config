@@ -27,12 +27,6 @@ require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
-    -- Disable gitsigns.nvim (prevents that error)
-    {
-      "lewis6991/gitsigns.nvim",
-      enabled = false,
-    },
-
     { import = "plugins" },  -- or { import = "plugins.code_runner" } if just one file
     -- other plugin specs if any
   },
@@ -41,11 +35,6 @@ require("lazy").setup({
   defaults = {
     lazy = false,
     version = false,
-  },
-
-  -- Color schemes to install
-  install = {
-    colorscheme = { "tokyonight", "habamax" },
   },
 
   -- Plugin update checker options
