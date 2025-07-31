@@ -127,3 +127,4 @@ vim.api.nvim_create_user_command('UC', function(opts)
   end
 end, { range = true })
 
+vim.keymap.set("n", "<leader>qr", ":%sub//cg<Left><Left><Left>", { desc = "Substitute with confirmation" })
