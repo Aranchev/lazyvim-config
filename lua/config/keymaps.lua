@@ -71,4 +71,5 @@ vim.keymap.set('n', '<leader>fk', require('telescope.builtin').keymaps, {
   silent = true,
 })
 
-
+-- lua/config/keymaps.lua
+vim.keymap.set("n", "<leader>qr", ":%sub//cg<Left><Left><Left>", { desc = "Substitute with confirmation" })
