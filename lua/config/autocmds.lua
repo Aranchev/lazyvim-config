@@ -25,3 +25,19 @@ vim.api.nvim_create_autocmd("WinEnter", {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt.relativenumber = true
+    vim.opt.number = true
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    vim.opt.relativenumber = false
+    vim.opt.number = true
+  end,
+})
